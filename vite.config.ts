@@ -1,4 +1,4 @@
-import { defineConfig, UserConfig } from "vite";
+import { defineConfig, type UserConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { lingui } from "@lingui/vite-plugin"
 import { linguiMacroSwcPlugin } from "@lingui/swc-plugin/options"
