@@ -1,0 +1,11 @@
+nodeVersion: "24.14.0"
+saveExact: true
+packages:
+  - "packages/*"
+minimumReleaseAge: 10080 # 7 Days
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
+engineStrict: true
+catalog:
+  typescript: 7.0.2
+  "@types/node": 26.2.0
