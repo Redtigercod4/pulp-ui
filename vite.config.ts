@@ -1,5 +1,6 @@
 import { linguiMacroSwcPlugin } from "@lingui/swc-plugin/options";
 import { lingui } from "@lingui/vite-plugin";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig, type UserConfig } from "vite";
 
@@ -27,6 +28,10 @@ export default defineConfig({
 		outDir: "dist",
 	},
 	plugins: [
+		tanstackRouter({
+			target: "react",
+			autoCodeSplitting: true,
+		}),
 		react({
 			plugins: [linguiMacroSwcPlugin()],
 		}),
