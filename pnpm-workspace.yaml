@@ -1,4 +1,4 @@
-nodeVersion: "24.14.0"
+nodeVersion: "24.15.0"
 saveExact: true
 packages:
   - "packages/*"
@@ -10,6 +10,9 @@ engineStrict: true
 catalog:
   typescript: 7.0.2
   "@types/node": 26.2.0
+  msw: 2.15.0
+  vitest: 4.1.11
+  "@vitest/coverage-v8": "4.1.11"
 overrides:
   "@swc/core": 1.15.40
 minimumReleaseAgeExclude:
@@ -26,5 +29,7 @@ minimumReleaseAgeExclude:
   - '@types/react-dom@19.2.5'
   - '@tanstack/react-router@1.170.32'
   - '@tanstack/router-core@1.171.27'
+  - '@testing-library/react@16.3.3'
 allowBuilds:
   '@swc/core': true
+  msw: true

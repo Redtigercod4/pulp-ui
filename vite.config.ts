@@ -1,3 +1,5 @@
+/// <reference types="vitest/config" />
+
 import { linguiMacroSwcPlugin } from "@lingui/swc-plugin/options";
 import { lingui } from "@lingui/vite-plugin";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
@@ -37,4 +39,28 @@ export default defineConfig({
 		}),
 		lingui(),
 	],
+	test: {
+		environment: "jsdom",
+		setupFiles: ["./src/vitest.setup.ts"],
+		tags: [
+			{
+				name: "integration",
+				description:
+					"ACL client functions tested against MSW-mocked Pulp responses - not a real backend",
+			},
+			{
+				name: "unit",
+				description:
+					"Pure functions, Zod schemas, and ACL codecs - no network or DOM",
+			},
+			{
+				name: "component",
+				description:
+					"React components rendered via Testing Library, with API calls mocked via MSW",
+			},
+		],
+		coverage: {
+			provider: "v8",
+		},
+	},
 }) satisfies UserConfig;
