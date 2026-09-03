@@ -110,7 +110,6 @@ msgid "{count, plural, one {Role} other {Roles}}"
 msgstr "{count, plural, one {Role} other {Roles}}"
 
 #: src/components/patternfly-wrappers/l10n.tsx
-#: src/components/patternfly-wrappers/l10n.tsx
 msgid "{count} more"
 msgstr "{count} 更多"
 
@@ -287,7 +286,6 @@ msgid "404 - Page not found"
 msgstr "404 - 页未找到"
 
 #: src/components/remote-form.tsx
-#: src/components/remote-form.tsx
 msgid "A PEM encoded client certificate used for authentication."
 msgstr "用于身份验证的 PEM 编码客户端证书。"
 
@@ -313,14 +311,9 @@ msgid "About project"
 msgstr ""
 
 #: src/components/execution-environment-header.tsx
-#: src/components/execution-environment-header.tsx
-#: src/containers/ansible-remote/detail.tsx
-#: src/containers/ansible-remote/detail.tsx
 #: src/containers/ansible-remote/detail.tsx
 #: src/containers/ansible-repository/detail.tsx
 #: src/containers/group-management/group-detail.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "Access"
 msgstr "访问"
@@ -342,7 +335,6 @@ msgid "Activity"
 msgstr "活动"
 
 #: src/components/container-repository-form.tsx
-#: src/components/container-repository-form.tsx
 #: src/components/tag-manifest-modal.tsx
 #: src/components/wizard-modal.tsx
 #: src/containers/ansible-remote/edit.tsx
@@ -350,8 +342,6 @@ msgstr "活动"
 #: src/containers/execution-environment-detail/execution-environment-detail.tsx
 #: src/containers/file-remote/edit.tsx
 #: src/containers/file-repository/edit.tsx
-#: src/containers/group-management/group-detail.tsx
-#: src/containers/group-management/group-detail.tsx
 #: src/containers/group-management/group-detail.tsx
 msgid "Add"
 msgstr "添加"
@@ -442,7 +432,6 @@ msgid "Add remote"
 msgstr "添加远程"
 
 #: src/containers/execution-environment/registry-list.tsx
-#: src/containers/execution-environment/registry-list.tsx
 msgid "Add remote registry"
 msgstr "添加远程注册表"
 
@@ -452,7 +441,6 @@ msgid "Add repository"
 msgstr "添加软件仓库"
 
 #: src/components/access-tab.tsx
-#: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 #: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 #: src/containers/role-management/role-list.tsx
 msgid "Add roles"
@@ -483,11 +471,9 @@ msgid "add-user-modal"
 msgstr "add-user-modal"
 
 #: src/components/execution-environment/repository-form.tsx
-#~ msgid ""
-#~ "Adding groups provides access to all repositories in the\n"
+#~ msgid "Adding groups provides access to all repositories in the\n"
 #~ "\"{namespace}\" container namespace."
-#~ msgstr ""
-#~ "Adding groups provides access to all repositories in the\n"
+#~ msgstr "Adding groups provides access to all repositories in the\n"
 #~ "\"{namespace}\" container namespace."
 
 #: src/components/lightspeed-modal.tsx
@@ -581,13 +567,11 @@ msgstr ""
 #~ msgstr "API 错误：{ex}"
 
 #: src/components/collection-header.tsx
-#: src/components/collection-header.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "API error: {status}"
 msgstr ""
 
 #: src/containers/namespace-detail/namespace-detail.tsx
-#: src/components/collection-header.tsx
 #: src/components/collection-header.tsx
 #~ msgid "API Error: {status}"
 #~ msgstr "API 错误：{status}"
@@ -607,11 +591,9 @@ msgstr ""
 #. placeholder {0}: err.status
 #. placeholder {0}: errors.response.status
 #: src/components/import-modal.tsx
-#: src/components/import-modal.tsx
 msgid "API error. Status code: {0}"
 msgstr "API 错误。状态代码：{0}"
 
-#: src/containers/token/token.tsx
 #: src/containers/token/token.tsx
 #: src/menu.tsx
 #~ msgid "API token"
@@ -635,7 +617,6 @@ msgstr "API 错误。状态代码：{0}"
 #~ msgstr "批准仪表板"
 
 #: src/containers/certification-dashboard/certification-dashboard.tsx
-#: src/containers/certification-dashboard/certification-dashboard.tsx
 #~ msgid "Approval failed."
 #~ msgstr "批准失败。"
 
@@ -649,7 +630,6 @@ msgid "Approvals"
 msgstr ""
 
 #: src/components/approval-row.tsx
-#: src/components/approval-row.tsx
 msgid "Approve"
 msgstr "批准"
 
@@ -662,7 +642,6 @@ msgid "approved"
 msgstr "已批准"
 
 #: src/components/approval-row.tsx
-#: src/containers/approvals/approvals.tsx
 #: src/containers/approvals/approvals.tsx
 msgid "Approved"
 msgstr "批准"
@@ -757,11 +736,7 @@ msgid "Back"
 msgstr "返回"
 
 #: src/containers/ansible-repository/tab-distributions.tsx
-#: src/containers/ansible-repository/tab-distributions.tsx
 #: src/containers/collection-detail/collection-distributions.tsx
-#: src/containers/collection-detail/collection-distributions.tsx
-#: src/containers/collection-detail/collection-distributions.tsx
-#: src/containers/file-repository/tab-distributions.tsx
 #: src/containers/file-repository/tab-distributions.tsx
 msgid "Base path"
 msgstr "基本路径"
@@ -799,8 +774,6 @@ msgstr "浏览......"
 msgid "Build image from Containerfile"
 msgstr ""
 
-#: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
 #: src/containers/role-management/role-list.tsx
 msgid "Built-in"
 msgstr "内置"
@@ -868,11 +841,9 @@ msgid "Cannot delete non-empty namespace"
 msgstr ""
 
 #: src/utilities/delete-collection.tsx
-#: src/utilities/delete-collection.tsx
 #~ msgid "Cannot delete until collections <0/>that depend on this collection <1/>have been deleted."
 #~ msgstr "无法删除集合，直到集合 <0/>依赖于此集合 <1/> 已被删除。"
 
-#: src/components/collection-dropdown.tsx
 #: src/components/collection-dropdown.tsx
 msgid "Cannot delete until collections that depend on this collection have been deleted."
 msgstr ""
@@ -891,7 +862,6 @@ msgstr "集合 \"{namespace} {name} v{version}\" 证书已被成功上传。"
 #. placeholder {0}: version.namespace
 #. placeholder {1}: version.name
 #. placeholder {2}: version.version
-#: src/containers/approvals/approvals.tsx
 #: src/containers/approvals/approvals.tsx
 msgid "Certification status for collection \"{0} {1} v{2}\" has been successfully updated."
 msgstr "集合 \"{0} {1} v{2}\" 的认证状态已被成功更新。"
@@ -925,7 +895,6 @@ msgstr "更改并上传集合到命名空间。"
 #~ msgstr "Change container distribution"
 
 #: src/constants.tsx
-#: src/constants.tsx
 #~ msgid "Change container namespace permissions"
 #~ msgstr "Change container namespace permissions"
 
@@ -954,11 +923,9 @@ msgstr ""
 #~ msgstr "Change group"
 
 #: src/constants.tsx
-#: src/constants.tsx
 #~ msgid "Change image tags"
 #~ msgstr "Change image tags"
 
-#: src/constants.tsx
 #: src/constants.tsx
 #~ msgid "Change namespace"
 #~ msgstr "Change namespace"
@@ -989,8 +956,6 @@ msgstr ""
 #. placeholder {0}: version.namespace
 #. placeholder {1}: version.name
 #. placeholder {2}: version.version
-#: src/containers/approvals/approvals.tsx
-#: src/containers/approvals/approvals.tsx
 #: src/containers/approvals/approvals.tsx
 msgid "Changes to certification status for collection \"{0} {1} v{2}\" could not be saved."
 msgstr "无法保存集合\"{0} {1} v{2}\"认证状态的更改 。"
@@ -1065,7 +1030,6 @@ msgid "Client key"
 msgstr "客户端密钥"
 
 #: src/components/patternfly-wrappers/l10n.tsx
-#: src/components/patternfly-wrappers/l10n.tsx
 msgid "close"
 msgstr ""
 
@@ -1128,7 +1092,6 @@ msgstr ""
 #~ msgid "Collection \"{name} v{collectionVersion}\" could not be deleted."
 #~ msgstr "Collection \"{name} v{collectionVersion}\" could not be deleted."
 
-#: src/components/collection-header.tsx
 #: src/components/collection-header.tsx
 msgid "Collection \"{name} v{collectionVersion}\" has been successfully deleted."
 msgstr "成功删除集合 \"{name} v{collectionVersion}\"。"
@@ -1206,7 +1169,6 @@ msgid "Collection is not being used by any collection."
 msgstr "集合没有被任何集合使用。"
 
 #: src/containers/approvals/approvals.tsx
-#: src/containers/approvals/approvals.tsx
 msgid "Collection name"
 msgstr ""
 
@@ -1276,13 +1238,11 @@ msgstr "修改集合后会出现集合版本。"
 #: src/containers/ansible-repository/detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/search/multi-search.tsx
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/search.tsx
 #: src/menu.tsx
 msgid "Collections"
 msgstr "集合"
 
-#: src/utilities/translate-task.ts
 #: src/utilities/translate-task.ts
 msgid "Collections sync"
 msgstr ""
@@ -1362,7 +1322,6 @@ msgstr "完成"
 #~ msgstr "Connect to Hub"
 
 #: src/containers/pulp-status.tsx
-#: src/containers/pulp-status.tsx
 msgid "Connected"
 msgstr ""
 
@@ -1423,14 +1382,12 @@ msgid "Container registry type"
 msgstr "容器注册表类型"
 
 #: src/containers/execution-environment-list/execution-environment-list.tsx
-#: src/containers/execution-environment-list/execution-environment-list.tsx
 msgid "Container repository name"
 msgstr "容器仓库名称"
 
 #: src/components/execution-environment-header.tsx
 #: src/containers/execution-environment-list/execution-environment-list.tsx
 #: src/containers/execution-environment-manifest/execution-environment-manifest.tsx
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/multi-search.tsx
 #: src/menu.tsx
 msgid "Containers"
@@ -1484,7 +1441,6 @@ msgid "Contents"
 msgstr "内容"
 
 #: src/components/publish-to-controller-modal.tsx
-#: src/components/publish-to-controller-modal.tsx
 #~ msgid "Controller name"
 #~ msgstr "控制器名称"
 
@@ -1526,7 +1482,6 @@ msgid "Copy version {version} to repositories"
 msgstr ""
 
 #: src/components/patternfly-wrappers/l10n.tsx
-#: src/components/patternfly-wrappers/l10n.tsx
 msgid "Copyable input"
 msgstr ""
 
@@ -1538,7 +1493,6 @@ msgstr "还无法决定"
 msgid "Could not load import log"
 msgstr "无法加载导入日志"
 
-#: src/containers/certification-dashboard/certification-dashboard.tsx
 #: src/containers/certification-dashboard/certification-dashboard.tsx
 #~ msgid "Could not update the certification status for {0}.{1}.{2}."
 #~ msgstr "Could not update the certification status for {0}.{1}.{2}."
@@ -1555,10 +1509,7 @@ msgstr "数量"
 #: src/components/group-modal.tsx
 #: src/components/namespace-modal.tsx
 #: src/containers/group-management/group-list.tsx
-#: src/containers/group-management/group-list.tsx
 #: src/containers/namespace-list/namespace-list.tsx
-#: src/containers/namespace-list/namespace-list.tsx
-#: src/containers/user-management/user-list.tsx
 #: src/containers/user-management/user-list.tsx
 msgid "Create"
 msgstr "创建"
@@ -1609,7 +1560,6 @@ msgstr ""
 #~ msgstr "Create issue"
 
 #: src/constants.tsx
-#: src/constants.tsx
 #~ msgid "Create new containers"
 #~ msgstr "Create new containers"
 
@@ -1617,7 +1567,6 @@ msgstr ""
 msgid "Create new role"
 msgstr "创建新角色"
 
-#: src/containers/user-management/user-create.tsx
 #: src/containers/user-management/user-create.tsx
 msgid "Create new user"
 msgstr "创建新用户"
@@ -1639,9 +1588,7 @@ msgstr "创建"
 
 #: src/containers/ansible-repository/list.tsx
 #: src/containers/ansible-repository/tab-repository-versions.tsx
-#: src/containers/ansible-repository/tab-repository-versions.tsx
 #: src/containers/file-repository/list.tsx
-#: src/containers/file-repository/tab-repository-versions.tsx
 #: src/containers/file-repository/tab-repository-versions.tsx
 msgid "Created date"
 msgstr "创建日期"
@@ -1783,7 +1730,6 @@ msgstr ""
 #: src/containers/group-management/group-list.tsx
 #: src/containers/role-management/role-list.tsx
 #: src/containers/task-management/task-list-view.tsx
-#: src/containers/task-management/task-list-view.tsx
 #: src/containers/user-management/user-detail.tsx
 #: src/containers/user-management/user-list.tsx
 msgid "Delete"
@@ -1846,7 +1792,6 @@ msgstr "删除容器？"
 #~ msgstr "Delete distribution"
 
 #: src/utilities/delete-collection.tsx
-#: src/utilities/delete-collection.tsx
 #~ msgid "Delete entire collection"
 #~ msgstr "删除整个集合"
 
@@ -1866,7 +1811,6 @@ msgstr "删除组？"
 msgid "Delete image?"
 msgstr "删除镜像？"
 
-#: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "Delete namespace"
 msgstr "删除命名空间"
@@ -2005,7 +1949,6 @@ msgstr "不允许删除自己。"
 
 #: src/components/collection-header.tsx
 #: src/containers/collection-detail/collection-dependencies.tsx
-#: src/containers/collection-detail/collection-dependencies.tsx
 msgid "Dependencies"
 msgstr "依赖项"
 
@@ -2054,7 +1997,6 @@ msgstr "为集合 \"{name}\" 开始的弃用状态更新。"
 #: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 #: src/containers/role-management/role-list.tsx
 #: src/containers/task-management/task-detail.tsx
-#: src/containers/task-management/task-detail.tsx
 #: src/containers/task-management/task-list-view.tsx
 msgid "Description"
 msgstr "描述"
@@ -2093,8 +2035,6 @@ msgstr "详情"
 #~ msgid "Did you mean {0}?"
 #~ msgstr ""
 
-#: src/containers/execution-environment-detail/execution-environment-detail-images.tsx
-#: src/containers/execution-environment-detail/execution-environment-detail-images.tsx
 #: src/containers/execution-environment-detail/execution-environment-detail-images.tsx
 msgid "Digest"
 msgstr "摘要"
@@ -2259,7 +2199,6 @@ msgstr "把文件拖放在这里或浏览以上传"
 #~ msgstr "Drag and drop a file or upload one'"
 
 #: src/components/stateful-dropdown.tsx
-#: src/components/stateful-dropdown.tsx
 msgid "Dropdown"
 msgstr "下拉菜单"
 
@@ -2342,11 +2281,6 @@ msgstr "编辑用户"
 
 #: src/components/role-list-table.tsx
 #: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
 msgid "Editable"
 msgstr "可编辑"
 
@@ -2355,8 +2289,6 @@ msgstr "可编辑"
 #~ msgstr ""
 
 #: src/components/user-form.tsx
-#: src/containers/user-management/user-list.tsx
-#: src/containers/user-management/user-list.tsx
 #: src/containers/user-management/user-list.tsx
 msgid "Email"
 msgstr "电子邮件"
@@ -2420,7 +2352,6 @@ msgstr "删除组错误。"
 #~ msgstr "Error deleting namespace."
 
 #: src/containers/user-management/delete-user-modal.tsx
-#: src/containers/user-management/delete-user-modal.tsx
 #~ msgid "Error deleting user."
 #~ msgstr "Error deleting user."
 
@@ -2473,7 +2404,6 @@ msgstr "加载环境时出错。"
 #~ msgstr "Error loading group."
 
 #: src/components/execution-environment/repository-form.tsx
-#: src/components/execution-environment/repository-form.tsx
 #: src/components/namespace-form/namespace-form.tsx
 #: src/components/namespace-modal/namespace-modal.tsx
 #: src/components/user-form/user-form.tsx
@@ -2523,8 +2453,6 @@ msgstr "加载带有标签 {pipeline} 的存储库时出错。"
 #~ msgstr "Error loading token."
 
 #: src/containers/group-management/group-detail.tsx
-#: src/containers/group-management/group-detail.tsx
-#: src/containers/group-management/group-detail.tsx
 #: src/containers/group-management/group-list.tsx
 #: src/containers/user-management/user-list.tsx
 #~ msgid "Error loading users."
@@ -2570,7 +2498,6 @@ msgstr "保存 registry 时出错。"
 #~ msgstr "Error: delete failed"
 
 #: src/components/render-plugin-doc.tsx
-#: src/components/render-plugin-doc.tsx
 #~ msgid "Examples"
 #~ msgstr ""
 
@@ -2612,13 +2539,11 @@ msgstr ""
 
 #: src/containers/execution-environment-list/execution-environment-list.tsx
 #: src/containers/search/multi-search.tsx
-#: src/containers/search/multi-search.tsx
 #~ msgid "Execution environments"
 #~ msgstr ""
 
 #: src/components/execution-environment-header.tsx
 #: src/containers/execution-environment-manifest/execution-environment-manifest.tsx
-#: src/loaders/standalone/menu.tsx
 #: src/loaders/standalone/menu.tsx
 #~ msgid "Execution Environments"
 #~ msgstr "执行环境"
@@ -2845,7 +2770,6 @@ msgid "Failed to sign all versions in the collection."
 msgstr "为集合中的所有版本进行签名失败。"
 
 #: src/utilities/repo-signing.ts
-#: src/utilities/repo-signing.ts
 msgid "Failed to sign the container version."
 msgstr "为容器版本签名失败。"
 
@@ -2891,9 +2815,6 @@ msgstr ""
 #. placeholder {0}: selectedFilter.id.toLowerCase()
 #. placeholder {0}: selectedFilter.title.toLowerCase()
 #: src/components/compound-filter.tsx
-#: src/components/compound-filter.tsx
-#: src/components/compound-filter.tsx
-#: src/components/compound-filter.tsx
 msgid "Filter by {0}"
 msgstr "按 {0} 过滤"
 
@@ -2937,8 +2858,6 @@ msgid "Finished before:"
 msgstr ""
 
 #: src/components/user-form.tsx
-#: src/containers/user-management/user-list.tsx
-#: src/containers/user-management/user-list.tsx
 #: src/containers/user-management/user-list.tsx
 msgid "First name"
 msgstr "名"
@@ -3103,24 +3022,16 @@ msgstr "组 \"{0}\" 已从 \"{name}\" 中成功删除。"
 
 #. placeholder {0}: group.name
 #: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "Group \"{0}\" roles could not be update in \"{name}\"."
 msgstr "组 \"{0}\" 角色无法在 \"{name}\" 中更新。"
 
 #. placeholder {0}: group.name
 #: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "Group \"{0}\" roles successfully updated in \"{name}\"."
 msgstr "组 \"{0}\" 角色在 \"{name}\" 中已成功更新。"
@@ -3158,13 +3069,10 @@ msgid "Group list"
 msgstr "组列表"
 
 #: src/containers/group-management/group-list.tsx
-#: src/containers/group-management/group-list.tsx
-#: src/containers/group-management/group-list.tsx
 msgid "Group name"
 msgstr "组名称"
 
 #: src/components/access-tab.tsx
-#: src/components/user-form.tsx
 #: src/components/user-form.tsx
 #: src/containers/group-management/group-detail.tsx
 #: src/containers/group-management/group-list.tsx
@@ -3255,8 +3163,6 @@ msgid "Image \"{digest}\" has been successfully deleted."
 msgstr "镜像 \"{digest}\" 已成功删除。"
 
 #: src/containers/execution-environment-manifest/execution-environment-manifest.tsx
-#: src/containers/execution-environment-manifest/execution-environment-manifest.tsx
-#: src/containers/execution-environment-manifest/execution-environment-manifest.tsx
 msgid "Image layers"
 msgstr "镜像层"
 
@@ -3273,7 +3179,6 @@ msgstr "上传后将显示镜像"
 #~ msgid "Import"
 #~ msgstr ""
 
-#: src/utilities/translate-task.ts
 #: src/utilities/translate-task.ts
 msgid "Import and auto approve"
 msgstr "导入和自动批准"
@@ -3461,7 +3366,6 @@ msgstr "关键字"
 #: src/actions/ansible-repository-collection-version-add.tsx
 #: src/components/collection-filter.ts
 #: src/components/multi-search-search.tsx
-#: src/components/multi-search-search.tsx
 #: src/containers/ansible-repository/tab-collection-versions.tsx
 msgid "Keywords"
 msgstr "关键字"
@@ -3474,7 +3378,6 @@ msgstr "关键字"
 msgid "Labels"
 msgstr "标签"
 
-#: src/containers/pulp-status.tsx
 #: src/containers/pulp-status.tsx
 msgid "Last heartbeat"
 msgstr ""
@@ -3489,8 +3392,6 @@ msgstr "最后修改"
 #~ msgstr ""
 
 #: src/components/user-form.tsx
-#: src/containers/user-management/user-list.tsx
-#: src/containers/user-management/user-list.tsx
 #: src/containers/user-management/user-list.tsx
 msgid "Last name"
 msgstr "姓"
@@ -3626,7 +3527,6 @@ msgid "Loading distribution..."
 msgstr ""
 
 #: src/components/patternfly-wrappers/l10n.tsx
-#: src/components/patternfly-wrappers/l10n.tsx
 msgid "Loading..."
 msgstr ""
 
@@ -3648,7 +3548,6 @@ msgstr ""
 #~ msgstr "登录到您的帐户"
 
 #: src/components/login-link.tsx
-#: src/components/login-link.tsx
 #: src/containers/login/login.tsx
 #: src/menu.tsx
 msgid "Login"
@@ -3662,7 +3561,6 @@ msgstr "徽标 URL"
 msgid "Logout"
 msgstr "退出"
 
-#: src/components/repository-form.tsx
 #: src/components/repository-form.tsx
 msgid "Make private"
 msgstr "使其私有"
@@ -3738,7 +3636,6 @@ msgid "My namespaces"
 msgstr "我的命名空间"
 
 #: src/containers/settings/user-profile.tsx
-#: src/containers/settings/user-profile.tsx
 #: src/layout.tsx
 msgid "My profile"
 msgstr "我的配置集"
@@ -3747,11 +3644,8 @@ msgstr "我的配置集"
 #: src/components/collection-filter.ts
 #: src/components/collection-usedby-dependencies-list.tsx
 #: src/components/container-repository-form.tsx
-#: src/components/container-repository-form.tsx
 #: src/components/group-modal.tsx
 #: src/components/import-list.tsx
-#: src/components/import-list.tsx
-#: src/components/multiple-repo-selector.tsx
 #: src/components/multiple-repo-selector.tsx
 #: src/components/namespace-form.tsx
 #: src/components/namespace-modal.tsx
@@ -3759,29 +3653,16 @@ msgstr "我的配置集"
 #: src/components/repository-form.tsx
 #: src/components/role-form.tsx
 #: src/components/select-group.tsx
-#: src/components/select-group.tsx
-#: src/components/select-roles.tsx
 #: src/components/select-roles.tsx
 #: src/components/select-user.tsx
-#: src/components/select-user.tsx
 #: src/containers/ansible-repository/tab-distributions.tsx
-#: src/containers/ansible-repository/tab-distributions.tsx
-#: src/containers/collection-detail/collection-distributions.tsx
-#: src/containers/collection-detail/collection-distributions.tsx
 #: src/containers/collection-detail/collection-distributions.tsx
 #: src/containers/execution-environment-list/execution-environment-list.tsx
 #: src/containers/execution-environment/registry-list.tsx
-#: src/containers/execution-environment/registry-list.tsx
-#: src/containers/execution-environment/registry-list.tsx
 #: src/containers/file-repository/tab-distributions.tsx
-#: src/containers/file-repository/tab-distributions.tsx
-#: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 #: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 #: src/containers/namespace-list/namespace-list.tsx
 #: src/containers/pulp-status.tsx
-#: src/containers/pulp-status.tsx
-#: src/containers/signature-keys/list.tsx
-#: src/containers/signature-keys/list.tsx
 #: src/containers/signature-keys/list.tsx
 #: src/containers/task-management/task-detail.tsx
 msgid "Name"
@@ -3813,11 +3694,8 @@ msgstr "名称不能为空。"
 
 #: src/actions/ansible-repository-collection-version-add.tsx
 #: src/components/collection-filter.ts
-#: src/components/collection-filter.ts
 #: src/components/import-list.tsx
 #: src/containers/ansible-repository/tab-collection-versions.tsx
-#: src/containers/approvals/approvals.tsx
-#: src/containers/approvals/approvals.tsx
 #: src/containers/approvals/approvals.tsx
 msgid "Namespace"
 msgstr "命名空间"
@@ -3864,7 +3742,6 @@ msgstr "命名空间名称限制为字母数字字符和下划线，长度最少
 
 #: src/components/namespace-form/namespace-form.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 #~ msgid "Namespace owners"
 #~ msgstr "Namespace owners"
 
@@ -3881,7 +3758,6 @@ msgstr "命名空间名称限制为字母数字字符和下划线，长度最少
 #: src/containers/edit-namespace/edit-namespace.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-list/namespace-list.tsx
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/multi-search.tsx
 #: src/menu.tsx
 msgid "Namespaces"
@@ -3902,11 +3778,9 @@ msgstr "命名空间在创建后会出现"
 
 #: src/components/approval-row.tsx
 #: src/containers/approvals/approvals.tsx
-#: src/containers/approvals/approvals.tsx
 msgid "Needs review"
 msgstr "需要审核"
 
-#: src/containers/approvals/approvals.tsx
 #: src/containers/approvals/approvals.tsx
 #~ msgid "Needs Review"
 #~ msgstr "需要审核"
@@ -3989,8 +3863,6 @@ msgstr "还没有容器仓库"
 #~ msgid "No Controllers available"
 #~ msgstr "没有控制器可用"
 
-#: src/containers/my-imports/my-imports.tsx
-#: src/containers/my-imports/my-imports.tsx
 #: src/containers/my-imports/my-imports.tsx
 msgid "No data"
 msgstr "没有数据"
@@ -4091,7 +3963,6 @@ msgid "No parent task"
 msgstr "没有父任务"
 
 #: src/components/permission-chip-selector.tsx
-#: src/components/permission-chip-selector.tsx
 msgid "No permission"
 msgstr "没有权限"
 
@@ -4189,32 +4060,21 @@ msgstr "不存在与 {version_range} 匹配的 {fqn} 版本。"
 #~ msgstr "没有版本"
 
 #: src/components/container-repository-form.tsx
-#: src/components/container-repository-form.tsx
 #: src/components/copy-url.tsx
-#: src/components/pulp-labels.tsx
 #: src/components/pulp-labels.tsx
 #: src/components/repository-form.tsx
 #: src/containers/ansible-remote/tab-details.tsx
-#: src/containers/ansible-remote/tab-details.tsx
-#: src/containers/ansible-remote/tab-details.tsx
 #: src/containers/ansible-repository/list.tsx
 #: src/containers/ansible-repository/tab-details.tsx
-#: src/containers/ansible-repository/tab-details.tsx
 #: src/containers/ansible-repository/tab-repository-versions.tsx
-#: src/containers/ansible-repository/tab-repository-versions.tsx
-#: src/containers/file-remote/tab-details.tsx
-#: src/containers/file-remote/tab-details.tsx
 #: src/containers/file-remote/tab-details.tsx
 #: src/containers/file-repository/list.tsx
 #: src/containers/file-repository/tab-details.tsx
-#: src/containers/file-repository/tab-details.tsx
-#: src/containers/file-repository/tab-repository-versions.tsx
 #: src/containers/file-repository/tab-repository-versions.tsx
 #: src/containers/pulp-status.tsx
 msgid "None"
 msgstr "无"
 
-#: src/components/user-form.tsx
 #: src/components/user-form.tsx
 #~ msgid "Not a super user"
 #~ msgstr "不是一个超级用户"
@@ -4245,7 +4105,6 @@ msgstr "其他集合不需要使用"
 #~ msgid "Note: this URL contains all collections in Hub. To connect to your organization's sync repository use the URL found on <0>Repository Management</0>."
 #~ msgstr "Note: this URL contains all collections in Hub. To connect to your organization's sync repository use the URL found on <0>Repository Management</0>."
 
-#: src/components/render-plugin-doc.tsx
 #: src/components/render-plugin-doc.tsx
 #~ msgid "Notes"
 #~ msgstr ""
@@ -4297,21 +4156,17 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/lightspeed-modal.tsx
-#: src/components/lightspeed-modal.tsx
 #~ msgid "Opt in to Ansible Lightspeed"
 #~ msgstr "选择使用 Ansible Lightspeed"
 
-#: src/components/wisdom-modal/wisdom-modal.tsx
 #: src/components/wisdom-modal/wisdom-modal.tsx
 #~ msgid "Opt in to Wisdom"
 #~ msgstr "Opt in to Wisdom"
 
 #: src/components/lightspeed-modal.tsx
-#: src/components/lightspeed-modal.tsx
 #~ msgid "Opt out of Ansible Lightspeed"
 #~ msgstr "选择不再使用 Ansible Lightspeed"
 
-#: src/components/wisdom-modal/wisdom-modal.tsx
 #: src/components/wisdom-modal/wisdom-modal.tsx
 #~ msgid "Opt out of Wisdom"
 #~ msgstr "Opt out of Wisdom"
@@ -4375,11 +4230,9 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/execution-environment-header/execution-environment-header.tsx
-#: src/components/execution-environment-header/execution-environment-header.tsx
 #~ msgid "Owners"
 #~ msgstr "Owners"
 
-#: src/containers/rpm/package-list.tsx
 #: src/containers/rpm/package-list.tsx
 msgid "Package name"
 msgstr ""
@@ -4408,7 +4261,6 @@ msgstr ""
 #~ msgid "Parameter"
 #~ msgstr ""
 
-#: src/components/render-plugin-doc.tsx
 #: src/components/render-plugin-doc.tsx
 #~ msgid "Parameters"
 #~ msgstr ""
@@ -4588,8 +4440,6 @@ msgstr "插件"
 #~ msgstr "弹出示例"
 
 #: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
 #: src/components/markdown-editor.tsx
 #: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 msgid "Preview"
@@ -4673,7 +4523,6 @@ msgstr "已发布"
 msgid "Pull only latest?"
 msgstr ""
 
-#: src/constants.tsx
 #: src/constants.tsx
 #~ msgid "Pull private containers"
 #~ msgstr "Pull private containers"
@@ -4889,7 +4738,6 @@ msgstr ""
 #~ msgstr ""
 
 #: src/containers/execution-environment-list/execution-environment-list.tsx
-#: src/containers/execution-environment-list/execution-environment-list.tsx
 msgid "Push container images"
 msgstr "推容器镜像"
 
@@ -5026,11 +4874,9 @@ msgstr "拒绝"
 
 #: src/components/approval-row.tsx
 #: src/containers/approvals/approvals.tsx
-#: src/containers/approvals/approvals.tsx
 msgid "Rejected"
 msgstr "拒绝"
 
-#: src/containers/certification-dashboard/certification-dashboard.tsx
 #: src/containers/certification-dashboard/certification-dashboard.tsx
 #~ msgid "Rejection failed."
 #~ msgstr "Rejection failed."
@@ -5065,9 +4911,7 @@ msgid "Remote could not be displayed."
 msgstr "远程无法被显示。"
 
 #: src/containers/ansible-remote/list.tsx
-#: src/containers/ansible-remote/list.tsx
 #: src/containers/ansible-remote/tab-details.tsx
-#: src/containers/file-remote/list.tsx
 #: src/containers/file-remote/list.tsx
 #: src/containers/file-remote/tab-details.tsx
 msgid "Remote name"
@@ -5104,7 +4948,6 @@ msgstr "远程 \"{name}\" 已被成功删除。"
 #: src/containers/file-remote/detail.tsx
 #: src/containers/file-remote/edit.tsx
 #: src/containers/file-remote/list.tsx
-#: src/menu.tsx
 #: src/menu.tsx
 msgid "Remotes"
 msgstr "远程"
@@ -5253,7 +5096,6 @@ msgstr "仓库"
 #: src/containers/file-repository/edit.tsx
 #: src/containers/file-repository/list.tsx
 #: src/menu.tsx
-#: src/menu.tsx
 msgid "Repositories"
 msgstr "软件仓库"
 
@@ -5271,7 +5113,6 @@ msgstr "仓库在创建后会出现。"
 #~ msgid "repository"
 #~ msgstr "repository"
 
-#: src/actions/ansible-repository-collection-version-add.tsx
 #: src/actions/ansible-repository-collection-version-add.tsx
 #: src/components/collection-filter.ts
 #: src/components/import-modal.tsx
@@ -5302,9 +5143,7 @@ msgstr "仓库无法被显示。"
 #~ msgstr "Repository Management"
 
 #: src/containers/ansible-repository/list.tsx
-#: src/containers/ansible-repository/list.tsx
 #: src/containers/ansible-repository/tab-details.tsx
-#: src/containers/file-repository/list.tsx
 #: src/containers/file-repository/list.tsx
 #: src/containers/file-repository/tab-details.tsx
 msgid "Repository name"
@@ -5376,7 +5215,6 @@ msgstr "版本的保留数量"
 msgid "Retained version count"
 msgstr "保留版本计数"
 
-#: src/components/render-plugin-doc.tsx
 #: src/components/render-plugin-doc.tsx
 #~ msgid "Return Values"
 #~ msgstr ""
@@ -5462,8 +5300,6 @@ msgstr "角色 {0} 已成功添加到 {1}。"
 
 #: src/components/role-form.tsx
 #: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
-#: src/containers/role-management/role-list.tsx
 msgid "Role name"
 msgstr "角色名称"
 
@@ -5477,7 +5313,6 @@ msgstr "角色名称"
 
 #: src/containers/ansible-role/namespace-list.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/multi-search.tsx
 #~ msgid "Role namespaces"
 #~ msgstr ""
@@ -5670,8 +5505,6 @@ msgid "Select a collection"
 msgstr "选择一个集合"
 
 #: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
 msgid "Select a group"
 msgstr "选择一个组"
 
@@ -5687,8 +5520,6 @@ msgstr "选择一个远程"
 #~ msgid "Select a tag"
 #~ msgstr "选择标签"
 
-#: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
 #: src/components/access-tab.tsx
 msgid "Select a user"
 msgstr ""
@@ -5735,7 +5566,6 @@ msgid "Select page ({0} items)"
 msgstr "选择页面（{0} 个项）"
 
 #: src/components/permission-chip-selector.tsx
-#: src/components/permission-chip-selector.tsx
 msgid "Select permissions"
 msgstr "选择权限"
 
@@ -5743,9 +5573,6 @@ msgstr "选择权限"
 msgid "Select repositories"
 msgstr "选择软件仓库"
 
-#: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
-#: src/components/access-tab.tsx
 #: src/components/access-tab.tsx
 #: src/containers/group-management/group-detail-role-management/group-detail-role-management.tsx
 msgid "Select role(s)"
@@ -5808,38 +5635,30 @@ msgid "Show advanced options"
 msgstr "显示高级选项"
 
 #: src/containers/search/multi-search.tsx
-#: src/containers/search/multi-search.tsx
 msgid "Show all collections"
 msgstr ""
 
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/multi-search.tsx
 msgid "Show all containers"
 msgstr ""
 
 #: src/containers/search/multi-search.tsx
-#: src/containers/search/multi-search.tsx
 #~ msgid "Show all execution environments"
 #~ msgstr ""
 
-#: src/containers/not-found/dispatch.tsx
 #: src/containers/not-found/dispatch.tsx
 #~ msgid "Show all legacy roles"
 #~ msgstr ""
 
 #: src/containers/search/multi-search.tsx
-#: src/containers/search/multi-search.tsx
 msgid "Show all namespaces"
 msgstr ""
 
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/multi-search.tsx
 #~ msgid "Show all role namespaces"
 #~ msgstr ""
 
 #: src/containers/not-found/dispatch.tsx
-#: src/containers/not-found/dispatch.tsx
-#: src/containers/search/multi-search.tsx
 #: src/containers/search/multi-search.tsx
 #~ msgid "Show all roles"
 #~ msgstr ""
@@ -5849,12 +5668,10 @@ msgid "Show content"
 msgstr ""
 
 #: src/components/patternfly-wrappers/l10n.tsx
-#: src/components/patternfly-wrappers/l10n.tsx
 #: src/components/pulp-code-block.tsx
 msgid "Show less"
 msgstr ""
 
-#: src/components/patternfly-wrappers/l10n.tsx
 #: src/components/patternfly-wrappers/l10n.tsx
 #~ msgid "Show Less"
 #~ msgstr "显示更少"
@@ -5918,7 +5735,6 @@ msgid "Sign all collections in {repository}"
 msgstr "签名 {repository} 中的所有集合"
 
 #: src/components/approval-row.tsx
-#: src/components/approval-row.tsx
 msgid "Sign and approve"
 msgstr "签发并批准"
 
@@ -5951,7 +5767,6 @@ msgstr "签发版本 {version}"
 msgid "Signature"
 msgstr "签名"
 
-#: src/containers/signature-keys/list.tsx
 #: src/containers/signature-keys/list.tsx
 #: src/menu.tsx
 msgid "Signature keys"
@@ -6104,13 +5919,8 @@ msgid "States:"
 msgstr ""
 
 #: src/components/import-list.tsx
-#: src/components/import-list.tsx
-#: src/containers/approvals/approvals.tsx
-#: src/containers/approvals/approvals.tsx
 #: src/containers/approvals/approvals.tsx
 #: src/containers/pulp-status.tsx
-#: src/containers/task-management/task-list-view.tsx
-#: src/containers/task-management/task-list-view.tsx
 #: src/containers/task-management/task-list-view.tsx
 #: src/menu.tsx
 msgid "Status"
@@ -6121,8 +5931,6 @@ msgid "Status:"
 msgstr "状态："
 
 #: src/containers/task-management/task-detail.tsx
-#: src/containers/task-management/task-detail.tsx
-#: src/containers/task-management/task-list-view.tsx
 #: src/containers/task-management/task-list-view.tsx
 msgid "Stop task"
 msgstr "停止任务"
@@ -6131,7 +5939,6 @@ msgstr "停止任务"
 msgid "Stop task?"
 msgstr "停止任务？"
 
-#: src/containers/pulp-status.tsx
 #: src/containers/pulp-status.tsx
 msgid "Storage"
 msgstr ""
@@ -6186,7 +5993,6 @@ msgstr "成功创建仓库 {0}"
 #~ msgstr "Successfully deleted collection version."
 
 #: src/components/headers/collection-header.tsx
-#: src/components/headers/collection-header.tsx
 #~ msgid "Successfully deleted collection."
 #~ msgstr "Successfully deleted collection."
 
@@ -6217,7 +6023,6 @@ msgstr "成功创建仓库 {0}"
 #~ msgstr "Successfully stopped task."
 
 #: src/components/user-form.tsx
-#: src/components/user-form.tsx
 #: src/containers/user-management/user-list.tsx
 #~ msgid "Super user"
 #~ msgstr "超级用户"
@@ -6240,8 +6045,6 @@ msgid "Switch to light mode"
 msgstr ""
 
 #: src/actions/ansible-repository-sync.tsx
-#: src/actions/ansible-repository-sync.tsx
-#: src/actions/file-repository-sync.tsx
 #: src/actions/file-repository-sync.tsx
 msgid "Sync"
 msgstr "同步"
@@ -6326,12 +6129,10 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/render-plugin-doc.tsx
-#: src/components/render-plugin-doc.tsx
 #~ msgid "Synopsis"
 #~ msgstr ""
 
 #: src/components/collection-filter.ts
-#: src/containers/execution-environment-detail/execution-environment-detail-images.tsx
 #: src/containers/execution-environment-detail/execution-environment-detail-images.tsx
 msgid "Tag"
 msgstr "标签"
@@ -6401,8 +6202,6 @@ msgstr "任务管理"
 
 #: src/containers/task-management/task-detail.tsx
 #: src/containers/task-management/task-list-view.tsx
-#: src/containers/task-management/task-list-view.tsx
-#: src/containers/task-management/task-list-view.tsx
 msgid "Task name"
 msgstr "任务名称"
 
@@ -6425,7 +6224,6 @@ msgstr "任务在创建后将显示。"
 #~ msgid "Temporarily disabled due to sync issues. (AAH-1237)"
 #~ msgstr "Temporarily disabled due to sync issues. (AAH-1237)"
 
-#: src/containers/landing/landing-page.tsx
 #: src/containers/landing/landing-page.tsx
 #~ msgid "Terms of use"
 #~ msgstr ""
@@ -6631,7 +6429,6 @@ msgid "There are currently no users that can be assigned ownership."
 msgstr ""
 
 #: src/actions/ansible-repository-copy.tsx
-#: src/actions/ansible-repository-copy.tsx
 msgid "There are no distributions associated with this repository."
 msgstr ""
 
@@ -6652,7 +6449,6 @@ msgstr "此命名空间中没有任何导入。"
 #~ msgid "There have not been any imports."
 #~ msgstr ""
 
-#: src/containers/task-management/task-detail.tsx
 #: src/containers/task-management/task-detail.tsx
 msgid "There is no progress message."
 msgstr "没有进度消息。"
@@ -6923,7 +6719,6 @@ msgstr ""
 #~ msgstr ""
 
 #: src/containers/namespace-detail/namespace-detail.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 msgid "Upload collection"
 msgstr "上传集合"
 
@@ -6942,7 +6737,6 @@ msgstr "上传新版本"
 msgid "Upload signature"
 msgstr "上传签名"
 
-#: src/constants.tsx
 #: src/constants.tsx
 #~ msgid "Upload to namespace"
 #~ msgstr "Upload to namespace"
@@ -7067,7 +6861,6 @@ msgstr "用户 \"{0}\" 无法添加到组 \"{1}\" 中。"
 
 #. placeholder {0}: user.username
 #: src/components/delete-user-modal.tsx
-#: src/components/delete-user-modal.tsx
 msgid "User \"{0}\" could not be deleted."
 msgstr "用户 \"{0}\" 无法被删除。"
 
@@ -7122,24 +6915,16 @@ msgstr "用户 \"{0}\" 已成功从组 \"{name}\" 中删除。"
 
 #. placeholder {0}: user.username
 #: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "User \"{0}\" roles could not be update in \"{name}\"."
 msgstr ""
 
 #. placeholder {0}: user.username
 #: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-remote/tab-access.tsx
-#: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/ansible-repository/tab-access.tsx
 #: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/execution-environment-detail/execution-environment-detail-access.tsx
-#: src/containers/namespace-detail/namespace-detail.tsx
 #: src/containers/namespace-detail/namespace-detail.tsx
 msgid "User \"{0}\" roles successfully updated in \"{name}\"."
 msgstr ""
@@ -7202,9 +6987,6 @@ msgstr "用户列表"
 #: src/components/remote-form.tsx
 #: src/components/user-form.tsx
 #: src/containers/group-management/group-detail.tsx
-#: src/containers/group-management/group-detail.tsx
-#: src/containers/user-management/user-list.tsx
-#: src/containers/user-management/user-list.tsx
 #: src/containers/user-management/user-list.tsx
 msgid "Username"
 msgstr "用户名"
@@ -7231,8 +7013,6 @@ msgstr ""
 msgid "Users"
 msgstr "用户"
 
-#: src/containers/group-management/group-detail.tsx
-#: src/containers/group-management/group-detail.tsx
 #: src/containers/group-management/group-detail.tsx
 #: src/containers/group-management/group-list.tsx
 #: src/containers/user-management/user-list.tsx
@@ -7276,8 +7056,6 @@ msgid "Version {repositoryVersion}"
 msgstr "版本 {repositoryVersion}"
 
 #: src/containers/ansible-repository/tab-repository-versions.tsx
-#: src/containers/ansible-repository/tab-repository-versions.tsx
-#: src/containers/file-repository/tab-repository-versions.tsx
 #: src/containers/file-repository/tab-repository-versions.tsx
 msgid "Version number"
 msgstr "版本号"
@@ -7287,10 +7065,6 @@ msgid "Version:"
 msgstr "版本："
 
 #: src/containers/ansible-repository/detail.tsx
-#: src/containers/ansible-repository/detail.tsx
-#: src/containers/ansible-repository/detail.tsx
-#: src/containers/file-repository/detail.tsx
-#: src/containers/file-repository/detail.tsx
 #: src/containers/file-repository/detail.tsx
 #: src/containers/pulp-status.tsx
 msgid "Versions"
@@ -7347,7 +7121,6 @@ msgid "View more"
 msgstr "查看更多"
 
 #: src/constants.tsx
-#: src/constants.tsx
 #~ msgid "View private containers"
 #~ msgstr "View private containers"
 
@@ -7359,7 +7132,6 @@ msgstr "查看更多"
 #~ msgid "View synclist"
 #~ msgstr "View synclist"
 
-#: src/containers/execution-environment/registry-list.tsx
 #: src/containers/execution-environment/registry-list.tsx
 #: src/containers/execution-environment-detail/base.tsx
 #: src/containers/execution-environment-list/execution_environment_list.tsx
