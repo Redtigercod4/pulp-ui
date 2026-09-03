@@ -2,8 +2,6 @@ name: Reusable - Workflow Lint
 on:
     workflow_call:
 
-permissions: read-all
-
 jobs:
     zizmor:
         name: zizmor
