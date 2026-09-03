@@ -1,0 +1,12 @@
+name: Pull Request
+on:
+    pull_request:
+
+permissions: read-all
+
+jobs:
+    workflow-lint:
+        uses: ./.github/workflows/reusable-workflow-lint.yml
+        permissions:
+            contents: read
+            actions: read
