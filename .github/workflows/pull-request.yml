@@ -10,3 +10,7 @@ jobs:
         permissions:
             contents: read
             actions: read
+    dependency-review:
+        uses: ./.github/workflows/reusable-dependency-review.yml
+        permissions:
+            contents: read
