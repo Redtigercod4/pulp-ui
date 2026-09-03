@@ -14,3 +14,7 @@ jobs:
         uses: ./.github/workflows/reusable-dependency-review.yml
         permissions:
             contents: read
+    secret-scanning:
+        uses: ./.github/workflows/reusable-secrets-scan.yml
+        permissions:
+            contents: read
