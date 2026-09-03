@@ -6,15 +6,15 @@ permissions: read-all
 
 jobs:
     workflow-lint:
-        uses: ./.github/workflows/reusable-workflow-lint.yml
+        uses: $/.github/workflows/reusable-workflow-lint.yml
         permissions:
             contents: read
             actions: read
     dependency-review:
-        uses: ./.github/workflows/reusable-dependency-review.yml
+        uses: $/.github/workflows/reusable-dependency-review.yml
         permissions:
             contents: read
     secret-scanning:
-        uses: ./.github/workflows/reusable-secrets-scan.yml
+        uses: $/.github/workflows/reusable-secrets-scan.yml
         permissions:
             contents: read
