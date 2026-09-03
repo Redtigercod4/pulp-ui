@@ -30,4 +30,5 @@ jobs:
             - name: Run actionlint
               uses: docker://rhysd/actionlint@sha256:b1934ee5f1c509618f2508e6eb47ee0d3520686341fec936f3b79331f9315667 # v 1.7.12
               with:
-                args: -color
+                # https://github.com/rhysd/actionlint/issues/711
+                args: -color -ignore 'reusable workflow call "\$.+" at "uses:" is not following the format.'
