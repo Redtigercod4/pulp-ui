@@ -14,30 +14,30 @@ updates:
           - "vite"
           - "@vitejs/*"
           - "@swc/*"
-        lingui:
-          - "@lingui/*"
-        react:
-          patterns:
-            - "react"
-            - "react-dom"
-        tanstack:
-          patterns:
-            - "@tanstack/*"
-        testing:
-          patterns:
-            - "vitest"
-            - "@vitest/*"
-            - "@testing-library/*"
-            - "@playwright/*"
-            - "jsdom"
-            - "msw"
-        biome:
-          patterns:
-            - "@biomejs/*"
-        security-patches:
-          applies-to: security-updates
-          patterns:
-            - "*"
+      lingui:
+        - "@lingui/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+      tanstack:
+        patterns:
+          - "@tanstack/*"
+      testing:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+          - "@testing-library/*"
+          - "@playwright/*"
+          - "jsdom"
+          - "msw"
+      biome:
+        patterns:
+          - "@biomejs/*"
+      security-patches:
+        applies-to: security-updates
+        patterns:
+          - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
