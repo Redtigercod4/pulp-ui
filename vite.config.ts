@@ -5,6 +5,7 @@ import { lingui } from "@lingui/vite-plugin";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig, type UserConfig } from "vite";
+import { configDefaults } from "vitest/config";
 
 const proxyTarget: string = process.env.API_PROXY || "http://localhost:8080";
 const proxyRoutes: string[] = [
@@ -62,6 +63,6 @@ export default defineConfig({
 		coverage: {
 			provider: "v8",
 		},
-		exclude: ["playwright/**"],
+		exclude: ["playwright/**", ...configDefaults.exclude],
 	},
 }) satisfies UserConfig;
