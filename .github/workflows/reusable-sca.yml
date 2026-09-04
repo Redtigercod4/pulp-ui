@@ -24,7 +24,9 @@ jobs:
           cache: true
           require-lockfile: true
       - name: Audit
-        run: pnpm audit --audit-level=${{ inputs.fail-on-severity }}
+        env:
+            AUDIT_LEVEL: ${{ inputs.fail-on-severity }}
+        run: pnpm audit --audit-level="$AUDIT_LEVEL"
 
   osv-scanner:
     name: osv-scanner
@@ -60,7 +62,7 @@ jobs:
           cache: true
           require-lockfile: true
       - name: Generate SBOM
-        run: pnpm dlx @cyclonedx/cdxgen --output-file sbom.cdx.json --spec-version 1.5
+        run: pnpm dlx @cyclonedx/cdxgen -o sbom.cdx.json
       - name: Upload SBOM artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
