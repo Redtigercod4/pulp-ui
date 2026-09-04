@@ -1,20 +1,25 @@
 name: Pull Request
 on:
-    pull_request:
+  pull_request:
 
 permissions: read-all
 
 jobs:
-    workflow-lint:
-        uses: $/.github/workflows/reusable-workflow-lint.yml
-        permissions:
-            contents: read
-            actions: read
-    dependency-review:
-        uses: $/.github/workflows/reusable-dependency-review.yml
-        permissions:
-            contents: read
-    secret-scanning:
-        uses: $/.github/workflows/reusable-secrets-scan.yml
-        permissions:
-            contents: read
+  workflow-lint:
+    uses: $/.github/workflows/reusable-workflow-lint.yml
+    permissions:
+      contents: read
+      actions: read
+  dependency-review:
+    uses: $/.github/workflows/reusable-dependency-review.yml
+    permissions:
+      contents: read
+  secret-scanning:
+    uses: $/.github/workflows/reusable-secrets-scan.yml
+    permissions:
+      contents: read
+  software-composition-analysis:
+    uses: $/.github/workflows/reusable-sca.yml
+    permissions:
+      contents: read
+      actions: read

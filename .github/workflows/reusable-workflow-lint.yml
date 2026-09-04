@@ -1,34 +1,29 @@
 name: Reusable - Workflow Lint
 on:
-    workflow_call:
+  workflow_call:
 
 jobs:
-    zizmor:
-        name: zizmor
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            actions: read
-        steps:
-            - name: Checkout
-              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-              with:
-                persist-credentials: false
-            - name: Run zizmor
-              uses: zizmorcore/zizmor-action@70fb788f84895a7701f5643d103d587e460b5c99 # v0.6.3
-    
-    actionlint:
-        name: actionlint
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-        steps:
-            - name: Checkout
-              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-              with:
-                persist-credentials: false
-            - name: Run actionlint
-              uses: docker://rhysd/actionlint@sha256:b1934ee5f1c509618f2508e6eb47ee0d3520686341fec936f3b79331f9315667 # v 1.7.12
-              with:
-                # https://github.com/rhysd/actionlint/issues/711
-                args: -color -ignore 'reusable workflow call "\$.+" at "uses:" is not following the format.'
+  zizmor:
+    name: zizmor
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run zizmor
+        uses: zizmorcore/zizmor-action@70fb788f84895a7701f5643d103d587e460b5c99 # v0.6.3
+
+  actionlint:
+    name: actionlint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
