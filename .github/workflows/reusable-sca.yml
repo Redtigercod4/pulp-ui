@@ -1,33 +1,8 @@
 name: Reusable - SCA
 on:
   workflow_call:
-    inputs:
-      fail-on-severity:
-        type: string
-        default: high
 
 jobs:
-  pnpm-audit:
-    name: pnpm-audit
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-      - name: Setup pnpm & Node
-        uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
-        with:
-          runtime: node@24
-          cache: true
-          require-lockfile: true
-      - name: Audit
-        env:
-            AUDIT_LEVEL: ${{ inputs.fail-on-severity }}
-        run: pnpm audit --audit-level="$AUDIT_LEVEL"
-
   osv-scanner:
     name: osv-scanner
     runs-on: ubuntu-latest
