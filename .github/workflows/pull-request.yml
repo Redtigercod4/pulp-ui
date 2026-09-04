@@ -10,6 +10,7 @@ jobs:
     permissions:
       contents: read
       actions: read
+      security-events: write
   dependency-review:
     uses: $/.github/workflows/reusable-dependency-review.yml
     permissions:
@@ -28,4 +29,8 @@ jobs:
     permissions:
       contents: read
       actions: read
-      security-events: read
+      security-events: write
+  build:
+    uses: $/.github/workflows/reusable-build.yml
+    permissions:
+      contents: read
