@@ -1,0 +1,15 @@
+name: Main
+on:
+  push:
+    branches:
+      - next
+
+permissions: read-all
+
+jobs:
+  sast-quality:
+    uses: $/.github/workflows/reusable-sast-quality.yml
+    permissions:
+      contents: read
+      actions: read
+      security-events: read
