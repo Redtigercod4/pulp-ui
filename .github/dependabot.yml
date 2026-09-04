@@ -1,36 +1,48 @@
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
+      interval: "weekly"
+    versioning-strategy: increase
+    open-pull-requests-limit: 10
     groups:
-      babel:
+      vite-swc:
         patterns:
-          - '@babel/*'
-          - 'babel-loader'
-      eslint:
-        patterns:
-          - 'eslint'
-          - 'eslint-config-*'
-          - 'eslint-plugin-*'
-          - 'typescript-eslint'
-      lingui:
-        patterns:
-          - '@lingui/*'
-      patternfly:
-        patterns:
-          - '@patternfly/*'
-      react:
-        patterns:
-          - 'react'
-          - 'react-dom'
-    ignore:
-      - dependency-name: '@patternfly/*'
-        update-types:
-          - 'version-update:semver-major'
+          - "vite"
+          - "@vitejs/*"
+          - "@swc/*"
+        lingui:
+          - "@lingui/*"
+        react:
+          patterns:
+            - "react"
+            - "react-dom"
+        tanstack:
+          patterns:
+            - "@tanstack/*"
+        testing:
+          patterns:
+            - "vitest"
+            - "@vitest/*"
+            - "@testing-library/*"
+            - "@playwright/*"
+            - "jsdom"
+            - "msw"
+        biome:
+          patterns:
+            - "@biomejs/*"
+        security-patches:
+          applies-to: security-updates
+          patterns:
+            - "*"
 
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: 'weekly'
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      actions:
+        patterns:
+          - "*"
