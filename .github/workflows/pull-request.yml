@@ -23,3 +23,8 @@ jobs:
     permissions:
       contents: read
       actions: read
+  sast-quality:
+    uses: $/.github/workflows/reusable-sast-quality.yml
+    permissions:
+      contents: read
+      actions: read
