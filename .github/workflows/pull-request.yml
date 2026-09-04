@@ -1,0 +1,40 @@
+name: Pull Request
+on:
+  pull_request:
+
+permissions: read-all
+
+jobs:
+  workflow-lint:
+    uses: $/.github/workflows/reusable-workflow-lint.yml
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+  dependency-review:
+    uses: $/.github/workflows/reusable-dependency-review.yml
+    permissions:
+      contents: read
+  secret-scanning:
+    uses: $/.github/workflows/reusable-secrets-scan.yml
+    permissions:
+      contents: read
+  software-composition-analysis:
+    uses: $/.github/workflows/reusable-sca.yml
+    permissions:
+      contents: read
+      actions: read
+  sast-quality:
+    uses: $/.github/workflows/reusable-sast-quality.yml
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+  build:
+    uses: $/.github/workflows/reusable-build.yml
+    permissions:
+      contents: read
+  test:
+    uses: $/.github/workflows/reusable-tests.yml
+    permissions:
+        contents: read
