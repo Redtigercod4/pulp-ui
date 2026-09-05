@@ -32,4 +32,5 @@ minimumReleaseAgeExclude:
   - '@testing-library/react@16.3.3'
 allowBuilds:
   '@swc/core': true
+  esbuild: true
   msw: true

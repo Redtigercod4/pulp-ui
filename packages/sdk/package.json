@@ -1,8 +1,14 @@
 {
-  "name": "@pulp/sdk",
-  "version": "0.0.1",
-  "license": "Apache-2.0",
-  "author": "Pulp",
-  "private": true,
-  "type": "module"
+	"name": "@pulp/sdk",
+	"version": "0.0.1",
+	"license": "Apache-2.0",
+	"author": "Pulp",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"generate": "orval --config ./orval.config.ts"
+	},
+	"dependencies": {
+		"orval": "8.26.0"
+	}
 }
