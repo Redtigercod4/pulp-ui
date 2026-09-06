@@ -3,7 +3,7 @@ import { defineConfig } from "orval";
 export default defineConfig({
 	core: {
 		input: {
-			target: "./src/spec/openapi-3.112.0.json",
+			target: "./openapi-3.112.0.json",
 			filters: {
 				mode: "include",
 				tags: ["Status"],
@@ -13,7 +13,16 @@ export default defineConfig({
 			client: "fetch",
 			mode: "tags-split",
 			target: "./src/core/core.ts",
-			schemas: "./src/core/models",
+			schemas: { path: "./src/core/models", splitByTags: true },
+			override: {
+				mutator: {
+					path: "./src/lib/fetch.ts",
+					name: "pulpFetch",
+				},
+				fetch: {
+					includeHttpResponseReturnType: true,
+				},
+			},
 		},
 	},
 });
