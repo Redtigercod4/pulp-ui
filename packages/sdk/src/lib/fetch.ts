@@ -1,7 +1,7 @@
 const baseUrl = "http://localhost:8080";
 
 // TODO: Rename to client
-async function pulpFetch(url: string, options: RequestInit): Promise<unknown> {
+async function pulpFetch<T>(url: string, options: RequestInit): Promise<T> {
 	// Headers
 	const headers = new Headers(options.headers);
 

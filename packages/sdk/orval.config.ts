@@ -20,7 +20,7 @@ export default defineConfig({
 					name: "pulpFetch",
 				},
 				fetch: {
-					includeHttpResponseReturnType: true,
+					includeHttpResponseReturnType: false,
 				},
 			},
 		},
