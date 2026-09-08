@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"license": "Apache-2.0",
 	"author": "Pulp",
+	"contributors": [
+		"Redtigercod4"
+	],
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -10,5 +13,8 @@
 	},
 	"dependencies": {
 		"orval": "8.26.0"
+	},
+	"exports": {
+		"./core/*": "./core/*.ts"
 	}
 }

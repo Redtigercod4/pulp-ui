@@ -7,6 +7,9 @@
  */
 
 /**
- * Versions of the components installed.
+ * Serializer for asynchronous operations.
  */
-export type AppStatusResponseVersions = {[key: string]: string | null};
+export interface AsyncOperationResponse {
+	/** The href of the task. */
+	task: string;
+}

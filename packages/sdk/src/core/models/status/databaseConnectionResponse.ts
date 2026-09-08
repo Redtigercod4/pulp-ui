@@ -10,6 +10,6 @@
  * Serializer for the database connection information
  */
 export interface DatabaseConnectionResponse {
-  /** Info about whether the app can connect to the database */
-  connected: boolean;
+	/** Info about whether the app can connect to the database */
+	connected: boolean;
 }

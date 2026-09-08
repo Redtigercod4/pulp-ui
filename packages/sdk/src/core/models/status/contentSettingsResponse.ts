@@ -10,11 +10,11 @@
  * Serializer for information about content-app-settings for the pulp instance
  */
 export interface ContentSettingsResponse {
-  /**
-     * The CONTENT_ORIGIN setting for this Pulp instance
-     * @nullable
-     */
-  content_origin?: string | null;
-  /** The CONTENT_PATH_PREFIX setting for this Pulp instance */
-  content_path_prefix: string;
+	/**
+	 * The CONTENT_ORIGIN setting for this Pulp instance
+	 * @nullable
+	 */
+	content_origin?: string | null;
+	/** The CONTENT_PATH_PREFIX setting for this Pulp instance */
+	content_path_prefix: string;
 }

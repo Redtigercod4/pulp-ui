@@ -3,10 +3,10 @@ import { defineConfig } from "orval";
 export default defineConfig({
 	core: {
 		input: {
-			target: "./openapi-3.112.0.json",
+			target: "http://localhost:8080/pulp/api/v3/docs/api.json?pk_path=1",
 			filters: {
 				mode: "include",
-				tags: ["Status"],
+				tags: ["Status", "Login", "Tasks", "Users", "Groups", "Roles"],
 			},
 		},
 		output: {
@@ -14,6 +14,7 @@ export default defineConfig({
 			mode: "tags-split",
 			target: "./src/core/core.ts",
 			schemas: { path: "./src/core/models", splitByTags: true },
+			indexFiles: false,
 			override: {
 				mutator: {
 					path: "./src/mutator/pulpFetch.ts",

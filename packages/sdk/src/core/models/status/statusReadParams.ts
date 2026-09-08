@@ -7,12 +7,12 @@
  */
 
 export type StatusReadParams = {
-/**
- * A list of fields to include in the response.
- */
-fields?: string[];
-/**
- * A list of fields to exclude from the response.
- */
-exclude_fields?: string[];
+	/**
+	 * A list of fields to include in the response.
+	 */
+	fields?: string[];
+	/**
+	 * A list of fields to exclude from the response.
+	 */
+	exclude_fields?: string[];
 };

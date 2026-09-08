@@ -10,6 +10,6 @@
  * Serializer for information about the Redis connection
  */
 export interface RedisConnectionResponse {
-  /** Info about whether the app can connect to Redis */
-  connected: boolean;
+	/** Info about whether the app can connect to Redis */
+	connected: boolean;
 }

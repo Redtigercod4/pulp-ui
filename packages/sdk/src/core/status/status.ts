@@ -5,44 +5,31 @@
  * Fetch, Upload, Organize, and Distribute Software Packages
  * OpenAPI spec version: v3
  */
-import type {
-  StatusReadParams,
-  StatusResponse
-} from '../models';
 
+import { pulpFetch } from "../../mutator/pulpFetch";
+import type { StatusReadParams } from "../models/status/statusReadParams";
+import type { StatusResponse } from "../models/status/statusResponse";
 
-export type statusReadResponse200 = {
-  data: StatusResponse
-  status: 200
-}
+export const getStatusReadUrl = (params?: StatusReadParams) => {
+	const normalizedParams = new URLSearchParams();
 
-export type statusReadResponseSuccess = (statusReadResponse200) & {
-  headers: Headers;
+	Object.entries(params || {}).forEach(([key, value]) => {
+		const explodeParameters = ["fields", "exclude_fields"];
+
+		if (Array.isArray(value) && explodeParameters.includes(key)) {
+			value.forEach((v) => {
+				normalizedParams.append(key, v === null ? "null" : String(v));
+			});
+			return;
+		}
+	});
+
+	const stringifiedParams = normalizedParams.toString();
+
+	return stringifiedParams.length > 0
+		? `/pulp/api/v3/status/?${stringifiedParams}`
+		: `/pulp/api/v3/status/`;
 };
-;
-
-export type statusReadResponse = (statusReadResponseSuccess)
-
-export const getStatusReadUrl = (params?: StatusReadParams,) => {
-  const normalizedParams = new URLSearchParams();
-
-  Object.entries(params || {}).forEach(([key, value]) => {
-    const explodeParameters = ["fields","exclude_fields"];
-
-    if (Array.isArray(value) && explodeParameters.includes(key)) {
-      value.forEach((v) => {
-        normalizedParams.append(key, v === null ? 'null' : String(v));
-      });
-      return;
-    }
-
-
-  });
-
-  const stringifiedParams = normalizedParams.toString();
-
-  return stringifiedParams.length > 0 ? `/pulp/api/v3/status/?${stringifiedParams}` : `/pulp/api/v3/status/`
-}
 
 /**
  * Returns status and app information about Pulp.
@@ -56,22 +43,12 @@ export const getStatusReadUrl = (params?: StatusReadParams,) => {
  *  * disk usage information
  * @summary Inspect status of Pulp
  */
-export const statusRead = async (params?: StatusReadParams, options?: RequestInit): Promise<statusReadResponse> => {
-
-  const res = await fetch(getStatusReadUrl(params),
-  {
-    ...options,
-    method: 'GET'
-
-
-  }
-)
-
-
-  const body = [204, 205, 304].includes(res.status) ? null : await res.text();
-
-  const data: statusReadResponse['data'] = body ? JSON.parse(body) : {}
-  return { data, status: res.status, headers: res.headers } as statusReadResponse
-}
-
-
+export const statusRead = async (
+	params?: StatusReadParams,
+	options?: Parameters<typeof pulpFetch>[1],
+): Promise<StatusResponse> => {
+	return pulpFetch<StatusResponse>(getStatusReadUrl(params), {
+		...options,
+		method: "GET",
+	});
+};
