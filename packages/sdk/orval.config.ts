@@ -16,8 +16,8 @@ export default defineConfig({
 			schemas: { path: "./src/core/models", splitByTags: true },
 			override: {
 				mutator: {
-					path: "./src/mutator/fetchClient.ts",
-					name: "fetchClient",
+					path: "./src/mutator/pulpFetch.ts",
+					name: "pulpFetch",
 				},
 				fetch: {
 					includeHttpResponseReturnType: false,

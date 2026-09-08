@@ -1,15 +1,15 @@
 import { HttpResponse, http } from "msw";
 import { setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
-import { fetchClient } from "./fetchClient";
+import { pulpFetch } from "./pulpFetch";
 
-const server = setupServer();
+describe("Integration: pulpFetch", { tags: ["integration"] }, () => {
+	const server = setupServer();
 
-beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
+	beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
+	afterEach(() => server.resetHandlers());
+	afterAll(() => server.close());
 
-describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 	it("resolves with the parsed JSON body on a 2xx response", async () => {
 		server.use(
 			http.get("/pulp/api/v3/status/", () =>
@@ -17,7 +17,7 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 			),
 		);
 
-		const result = await fetchClient("/pulp/api/v3/status/", { method: "GET" });
+		const result = await pulpFetch("/pulp/api/v3/status/", { method: "GET" });
 
 		expect(result).toStrictEqual({ version: [] });
 	});
@@ -30,7 +30,7 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 		);
 
 		await expect(
-			fetchClient("/pulp/api/v3/status/", { method: "GET" }),
+			pulpFetch("/pulp/api/v3/status/", { method: "GET" }),
 		).rejects.toMatchObject({
 			status: 404,
 			data: { detail: "Not found." },
@@ -46,7 +46,7 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 			}),
 		);
 
-		await fetchClient("/pulp/api/v3/repositories/", {
+		await pulpFetch("/pulp/api/v3/repositories/", {
 			method: "POST",
 			body: JSON.stringify({ name: "test" }),
 		});
@@ -67,14 +67,14 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 		);
 
 		await expect(
-			fetchClient("/pulp/api/v3/status/", { method: "GET" }),
+			pulpFetch("/pulp/api/v3/status/", { method: "GET" }),
 		).rejects.toMatchObject({
 			status: 500,
 			data: "<html>Internal Server Error</html>",
 		});
 	});
 
-	it("does not override a Content-Type nheader the caller has already set", async () => {
+	it("does not override a Content-Type header the caller has already set", async () => {
 		let contentType: string | null = null;
 		server.use(
 			http.post("/pulp/api/v3/repositories", async ({ request }) => {
@@ -83,7 +83,7 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 			}),
 		);
 
-		await fetchClient("/pulp/api/v3/repositories/", {
+		await pulpFetch("/pulp/api/v3/repositories/", {
 			method: "POST",
 			headers: { "Content-Type": "application/merge-patch+json" },
 			body: JSON.stringify({ name: "test" }),
@@ -101,7 +101,7 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 			}),
 		);
 
-		await fetchClient("/pulp/api/v3/status/", { method: "GET" });
+		await pulpFetch("/pulp/api/v3/status/", { method: "GET" });
 
 		expect(credentials).toStrictEqual("include");
 	});
@@ -115,8 +115,56 @@ describe("Integration: fetchClient", { tags: ["integration"] }, () => {
 			}),
 		);
 
-		await fetchClient("/pulp/api/v3/status/", { method: "GET" });
+		await pulpFetch("/pulp/api/v3/status/", { method: "GET" });
 
 		expect(contentType).toBeNull();
+	});
+
+	it("uses application/merge-patch+json for PATCH when the caller sets no Content-Type", async () => {
+		let contentType: string | null = null;
+		server.use(
+			http.patch(
+				"/pulp/api/v3/repositories/rpm/rpm/1234567890/",
+				({ request }) => {
+					contentType = request.headers.get("content-type");
+					return HttpResponse.json({});
+				},
+			),
+		);
+
+		await pulpFetch("/pulp/api/v3/repositories/rpm/rpm/1234567890/", {
+			method: "PATCH",
+			body: JSON.stringify({ name: "test" }),
+		});
+
+		expect(contentType).toStrictEqual("application/merge-patch+json");
+	});
+
+	it("resolves with undefined on a 204 No Content response", async () => {
+		server.use(
+			http.delete("/pulp/api/v3/rpm/rpm/1234567890", () => {
+				return new HttpResponse(null, { status: 204 });
+			}),
+		);
+
+		const result = await pulpFetch("/pulp/api/v3/rpm/rpm/1234567890", {
+			method: "DELETE",
+		});
+
+		expect(result).toBeUndefined();
+	});
+
+	it("throws when a 2xx response is missing Content-Type", async () => {
+		server.use(
+			http.get("/pulp/api/v3/status/", () => {
+				const res = new HttpResponse("No Headers", { status: 200 });
+				res.headers.delete("content-type");
+				return res;
+			}),
+		);
+
+		await expect(
+			pulpFetch("/pulp/api/v3/status/", { method: "GET" }),
+		).rejects.toThrow("Response missing Content-Type header");
 	});
 });
