@@ -12,7 +12,7 @@
 		"generate": "orval --config ./orval.config.ts"
 	},
 	"dependencies": {
-		"orval": "8.26.0"
+		"orval": "8.30.0"
 	},
 	"exports": {
 		"./core/*": "./core/*.ts"
