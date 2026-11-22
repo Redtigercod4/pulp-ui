@@ -1,8 +1,16 @@
 import { Trans } from '@lingui/react/macro';
 import { Banner, Flex, FlexItem } from '@patternfly/react-core';
 import WrenchIcon from '@patternfly/react-icons/dist/esm/icons/wrench-icon';
-import { type ElementType } from 'react';
-import { Navigate, redirect, useLocation } from 'react-router';
+import type { ComponentType, ElementType } from 'react';
+import {
+  type ActionFunction,
+  type LazyRouteFunction,
+  type LoaderFunction,
+  Navigate,
+  type RouteObject,
+  redirect,
+  useLocation,
+} from 'react-router';
 import { ErrorBoundary, ExternalLink, NotFound } from 'src/components';
 import {
   AboutProject,
@@ -65,6 +73,7 @@ import {
 import { Paths, formatPath } from 'src/paths';
 import { config } from 'src/ui-config';
 import { loginURL } from 'src/utilities';
+import { LoginPage as NextLoginPage, loginPath } from './routes/next/login';
 import { useUserContext } from './user-context';
 
 interface IRouteConfig {
@@ -409,20 +418,28 @@ const appRoutes = () =>
     ...rest,
   }));
 
-const convert = (m) => {
-  const {
-    default: Component,
-    clientLoader: loader,
-    clientAction: action,
-    ...rest
-  } = m;
-  return { ...rest, loader, action, Component };
-};
+interface RouteModule {
+  default: ComponentType;
+  clientLoader?: LoaderFunction;
+  clientAction?: ActionFunction;
+}
 
-export const dataRoutes = [
+const convert = ({
+  default: Component,
+  clientLoader: loader,
+  clientAction: action,
+  ...rest
+}: RouteModule): Awaited<ReturnType<LazyRouteFunction<RouteObject>>> => ({
+  ...rest,
+  loader,
+  action,
+  Component,
+});
+
+const dataRoutes = [
   {
     id: 'root',
-    lazy: () => import('src/routes/root').then((m) => convert(m)),
+    lazy: () => import('./routes/root').then((module) => convert(module)),
     children: [
       {
         errorElement: <ErrorBoundary />,
@@ -432,10 +449,16 @@ export const dataRoutes = [
             loader: () => redirect(formatPath(Paths.core.status)),
           },
           ...appRoutes(),
-          // "No matching route" is not handled by the error boundary.
           { path: '*', element: <NotFound /> },
         ],
       },
+      // NOTE: /next routes bypass AuthHandler/appRoutes - no UserContext dependency.
+      {
+        path: loginPath,
+        Component: NextLoginPage,
+      },
     ],
   },
-];
+] satisfies RouteObject[];
+
+export { dataRoutes };

@@ -153,5 +153,5 @@ export const Paths = {
   },
   rpm: {
     package: { list: '/rpm/rpms' },
-  },
+  }
 };
