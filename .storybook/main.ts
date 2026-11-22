@@ -16,8 +16,6 @@ const config: StorybookConfig = {
   webpackFinal: async (config) => {
     config.module = config.module ?? { rules: [] };
     config.module.rules = config.module.rules ?? [];
-    // .css is already handled by Storybook's implicit CSS loader detection.
-    // Only .scss/.sass need a rule added here, since nothing else provides one.
     config.module.rules.push({
       test: /\.(scss|sass)$/,
       exclude: /\.css$/,
